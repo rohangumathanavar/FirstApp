@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Build Docker Image
-        run: docker build -t rohangumathanavar/firstapp:latest ./app
+        run: docker build -t rohandevops4/firstapp:latest ./app
 
       - name: Show Current Directory
         run: pwd
@@ -29,7 +29,7 @@ jobs:
         run: ls -R
 
       - name: Push Docker Image
-        run: docker push rohangumathanavar/firstapp:latest
+        run: docker push rohandevops4/firstapp:latest
 
       - name: List Docker Images
         run: docker images
