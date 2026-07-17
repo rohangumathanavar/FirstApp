@@ -51,7 +51,7 @@ jobs:
             which docker-compose
             export IMAGE_TAG=${{ github.run_number }}
             docker pull rohandevops4/firstapp:$IMAGE_TAG
-            docker-compose -f docker-compose.prod.yml -d up
+            docker-compose -f docker-compose.prod.yml up -d
 
       - name: List Docker Images
         run: docker images
