@@ -22,7 +22,7 @@ services:
 
 
   web:
-    image: rohandevops4/firstapp:latest
+    image: rohandevops4/firstapp:${IMAGE_TAG}
 
     ports:
       - "5000:5000"

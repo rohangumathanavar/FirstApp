@@ -45,8 +45,9 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ec2-user/FirstApp
-            docker pull rohandevops4/firstapp:${{ github.run_number }}
-            docker compose up -d
+            export IMAGE_TAG=${{ github.run_number }}
+            docker pull rohandevops4/firstapp:$IMAGE_TAG
+            docker-compose -f docker-compose.prod.yml up
 
       - name: List Docker Images
         run: docker images
