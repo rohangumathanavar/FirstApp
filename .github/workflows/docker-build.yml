@@ -20,10 +20,11 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Build Docker Image
-        run: docker build \
-        -t rohandevops4/firstapp:${{github.run_number}} \ 
-        -t rohandevops4/firstapp:latest \
-        ./app
+        run: |
+          docker build \
+            -t rohandevops4/firstapp:${{github.run_number}} \ 
+            -t rohandevops4/firstapp:latest \
+            ./app
 
       - name: Show Current Directory
         run: pwd
