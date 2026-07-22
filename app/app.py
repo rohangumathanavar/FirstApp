@@ -43,7 +43,11 @@ def home():
         cursor.close()
         conn.close()
 
-        return f"MySQL Version: {version[0]}"
+        return f"""
+        <h1>🚀 Flask + MySQL</h1>
+        <h2>Application Version: 11</h2>
+        <p>MySQL Version: {version[0]}</p>
+        """
 
     except Exception as e:
         return str(e)
