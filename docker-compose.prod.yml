@@ -28,6 +28,7 @@ services:
       - "5000:5000"
 
     environment:
+      APP_VERSION: ${IMAGE_TAG}
       DB_HOST: ${DB_HOST}
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
