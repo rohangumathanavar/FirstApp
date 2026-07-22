@@ -43,9 +43,11 @@ def home():
         cursor.close()
         conn.close()
 
+        APP_VERSION = os.getenv("APP_VERSION", "Development")
+
         return f"""
         <h1>🚀 Flask + MySQL</h1>
-        <h2>Application Version: 11</h2>
+        <h2>Application Version: {APP_VERSION}</h2>
         <p>MySQL Version: {version[0]}</p>
         """
 

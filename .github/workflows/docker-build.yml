@@ -49,6 +49,7 @@ jobs:
             ls -l
             which docker
             which docker-compose
+            sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=${{ github.run_number }}/" .env
             export IMAGE_TAG=${{ github.run_number }}
             docker pull rohandevops4/firstapp:$IMAGE_TAG
             docker-compose -f docker-compose.prod.yml up -d
